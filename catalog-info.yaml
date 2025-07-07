@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: ydss721gh-java-springboot-gitops
+  description: This is GitOps manifest for ydss721gh-java-springboot   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=ydss721gh-java-springboot
+    backstage.io/kubernetes-id: ydss721gh-java-springboot 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: ydss721gh-java-springboot
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:ydss721gh-java-springboot

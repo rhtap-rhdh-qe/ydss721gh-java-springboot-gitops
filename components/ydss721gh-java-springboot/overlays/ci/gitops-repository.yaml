@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: ydss721gh-java-springboot-gitops-repository
+spec:
+  url: https://github.com/rhtap-rhdh-qe/ydss721gh-java-springboot-gitops
